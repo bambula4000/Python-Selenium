@@ -1,6 +1,8 @@
 from selenium import webdriver
+from Tools.Path import *
 
-driver = webdriver.Chrome("C://Users//Grom//Documents/chromedriver.exe")
+
+driver = webdriver.Chrome(path_to_driver)
 driver.implicitly_wait(10)  # wait for any element, max time 10 seconds
 driver.get("https://www.phptravels.net/admin")
 

@@ -1,7 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from Tools.Path import *
 
-driver = webdriver.Chrome("C://Users//Grom//Documents//chromedriver.exe")
+driver = webdriver.Chrome(path_to_driver)
 
 driver.get("https://accounts.ukr.net/registration")
 

@@ -1,7 +1,8 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+from Tools.Path import *
 
-driver = webdriver.Chrome("C://Users//Grom//Documents//chromedriver.exe")
+
+driver = webdriver.Chrome(path_to_driver)
 
 driver.get("https://www.w3schools.com/howto/")  # first site
 print(driver.title)

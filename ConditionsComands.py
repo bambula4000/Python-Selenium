@@ -1,7 +1,9 @@
 from selenium import webdriver
 from time import sleep
+from Tools.Path import *
 
-driver = webdriver.Chrome("C://Users//Grom//Documents//chromedriver.exe")
+
+driver = webdriver.Chrome(path_to_driver)
 
 driver.get("https://www.phptravels.net/admin")
 
