@@ -17,3 +17,5 @@ user_management = driver.find_element_by_xpath('//*[@id="menu_admin_UserManageme
 users = driver.find_element_by_xpath('//*[@id="menu_admin_viewSystemUsers"]')
 
 actions.move_to_element(admin).move_to_element(user_management).move_to_element(users).click().perform()
+
+driver.quit()
