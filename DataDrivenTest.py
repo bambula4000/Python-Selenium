@@ -12,13 +12,15 @@ path = 'C://Users//Grom//Downloads//Credentials.xlsx'
 rows_count = ExcelUtils.get_row_count(path, 'TemplateImportEmpl')
 
 for row in range(1, rows_count+1):
+    # get user credentials from excel file
     user_name = ExcelUtils.read_data(path, 'TemplateImportEmpl', row, 1)
     password = ExcelUtils.read_data(path, 'TemplateImportEmpl', row, 2)
-
+    # send credentials to web page login fields
     driver.find_element_by_id('txtUsername').send_keys(user_name)
     driver.find_element_by_id('txtPassword').send_keys(password)
 
     driver.find_element_by_id('btnLogin').click()
+    # write result info to excel file
     if driver.page_source.__contains__('Welcome Admin'):
         ExcelUtils.write_data(path, 'TemplateImportEmpl', row, 3, 'passed')
     else:
